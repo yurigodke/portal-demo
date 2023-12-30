@@ -7,6 +7,10 @@ export class Storage {
 
   getData = () => {
     const dataPosStr = localStorage.getItem('dataPos');
+    if (!dataPosStr) {
+      return;
+    }
+
     const dataPos = JSON.parse(dataPosStr);
 
     const currentTimeStamp = new Date().getTime()
