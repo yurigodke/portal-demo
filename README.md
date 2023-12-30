@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
+# Portal example
 
-This project has been created using **webpack-cli**, you can now run
+This project is a demo of the posibilities about the interaction inter browser windows.
 
-```
-npm run build
-```
+Example
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+![example](https://yurigodke.github.io/portal-demo/demo.gif)
