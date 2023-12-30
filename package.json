@@ -17,6 +17,7 @@
   "name": "my-webpack-project",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
+    "build:github": "webpack --mode=production --node-env=github",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",

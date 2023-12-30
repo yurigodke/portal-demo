@@ -4,17 +4,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isProduction = process.env.NODE_ENV == 'production';
-
+const isProduction = process.env.NODE_ENV == 'production' || process.env.NODE_ENV == 'github';
 
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
-
+const destinationFolder = process.env.NODE_ENV == 'github' ? 'docs' : 'dist';
 
 const config = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, destinationFolder),
     },
     devServer: {
         open: true,
